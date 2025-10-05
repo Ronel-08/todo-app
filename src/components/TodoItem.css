@@ -2,14 +2,23 @@
   background: rgba(102, 126, 234, 0.1);
   border: 2px solid rgba(102, 126, 234, 0.2);
   backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 10px;
+  padding: 12px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+  align-items: flex-start;
+  gap: 10px;
   transition: all 0.3s ease;
   animation: slideIn 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .todo-item {
+    border-radius: 12px;
+    padding: 16px;
+    gap: 15px;
+    align-items: center;
+  }
 }
 
 body.dark .todo-item {
@@ -58,30 +67,59 @@ body.dark .todo-item.overdue {
 .todo-left {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 10px;
   flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .todo-left {
+    gap: 12px;
+  }
 }
 
 .todo-checkbox {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   margin-top: 2px;
   cursor: pointer;
   accent-color: #667eea;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .todo-checkbox {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 .todo-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .todo-content {
+    gap: 8px;
+  }
 }
 
 .todo-text {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: #1a1a1a;
   word-break: break-word;
   font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .todo-text {
+    font-size: 1.05rem;
+  }
 }
 
 body.dark .todo-text {
@@ -100,19 +138,37 @@ body.dark .todo-item.completed .todo-text {
 .todo-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .todo-meta {
+    gap: 8px;
+  }
 }
 
 .category-badge,
 .priority-badge,
 .due-date {
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.75rem;
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .category-badge,
+  .priority-badge,
+  .due-date {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    gap: 5px;
+  }
 }
 
 .category-badge {
@@ -158,18 +214,33 @@ body.dark .due-date.overdue {
 
 .todo-actions {
   display: flex;
-  gap: 8px;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .todo-actions {
+    gap: 8px;
+  }
 }
 
 .edit-btn,
 .delete-btn {
   background: transparent;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  padding: 5px;
+  padding: 4px;
   transition: all 0.2s ease;
   color: #667eea;
+}
+
+@media (min-width: 768px) {
+  .edit-btn,
+  .delete-btn {
+    font-size: 1.3rem;
+    padding: 5px;
+  }
 }
 
 body.dark .edit-btn,
@@ -200,13 +271,20 @@ body.dark .todo-item.editing {
 
 .edit-input {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 2px solid #667eea;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.9);
   color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+  .edit-input {
+    padding: 12px;
+    font-size: 1rem;
+  }
 }
 
 body.dark .edit-input {
@@ -226,9 +304,22 @@ body.dark .edit-input:focus {
 
 .edit-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 8px;
   margin-bottom: 10px;
+}
+
+@media (min-width: 480px) {
+  .edit-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .edit-options {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
 }
 
 .edit-options select,
@@ -236,9 +327,16 @@ body.dark .edit-input:focus {
   padding: 8px 10px;
   border: 2px solid rgba(102, 126, 234, 0.3);
   border-radius: 6px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   background: rgba(255, 255, 255, 0.9);
   color: #1a1a1a;
+}
+
+@media (min-width: 768px) {
+  .edit-options select,
+  .edit-options input {
+    font-size: 0.9rem;
+  }
 }
 
 body.dark .edit-options select,
@@ -272,23 +370,38 @@ body.dark .edit-options input:focus {
 
 .edit-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .edit-actions {
+    gap: 10px;
+  }
 }
 
 .save-btn,
 .cancel-btn {
   flex: 1;
-  padding: 10px;
+  padding: 9px;
   border: none;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .save-btn,
+  .cancel-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+    gap: 8px;
+  }
 }
 
 .save-btn {
@@ -311,18 +424,14 @@ body.dark .edit-options input:focus {
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .todo-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .todo-left {
-    width: 100%;
+    flex-wrap: wrap;
   }
   
   .todo-actions {
     width: 100%;
     justify-content: flex-end;
+    margin-top: 4px;
   }
 }

@@ -2,10 +2,18 @@
   background: rgba(102, 126, 234, 0.1);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(102, 126, 234, 0.2);
-  border-radius: 16px;
-  padding: 25px;
-  margin-bottom: 25px;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .todo-input-container {
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+  }
 }
 
 body.dark .todo-input-container {
@@ -16,23 +24,45 @@ body.dark .todo-input-container {
 .todo-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .todo-form {
+    gap: 15px;
+  }
 }
 
 .input-row {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .input-row {
+    flex-direction: row;
+    gap: 10px;
+  }
 }
 
 .todo-input {
   flex: 1;
-  padding: 14px 18px;
+  padding: 12px 14px;
   border: 2px solid rgba(102, 126, 234, 0.3);
-  border-radius: 12px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.9);
   color: #1a1a1a;
-  font-size: 1rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .todo-input {
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
 }
 
 body.dark .todo-input {
@@ -53,15 +83,23 @@ body.dark .todo-input:focus {
 }
 
 .add-btn {
-  padding: 14px 28px;
+  padding: 12px 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .add-btn {
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
 }
 
 .add-btn:hover {
@@ -75,10 +113,16 @@ body.dark .todo-input:focus {
   border: none;
   color: #667eea;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding: 5px 10px;
   transition: opacity 0.3s ease;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .advanced-toggle {
+    font-size: 0.9rem;
+  }
 }
 
 body.dark .advanced-toggle {
@@ -91,21 +135,46 @@ body.dark .advanced-toggle {
 
 .advanced-options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   padding-top: 10px;
+}
+
+@media (min-width: 480px) {
+  .advanced-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .advanced-options {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
 }
 
 .option-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .option-group {
+    gap: 8px;
+  }
 }
 
 .option-group label {
   color: #667eea;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .option-group label {
+    font-size: 0.9rem;
+  }
 }
 
 body.dark .option-group label {
@@ -114,13 +183,21 @@ body.dark .option-group label {
 
 .option-group select,
 .option-group input[type="date"] {
-  padding: 10px 12px;
+  padding: 8px 10px;
   border: 2px solid rgba(102, 126, 234, 0.3);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.9);
   color: #1a1a1a;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .option-group select,
+  .option-group input[type="date"] {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
 }
 
 body.dark .option-group select,
@@ -151,14 +228,4 @@ body.dark .option-group input[type="date"]:focus {
 body.dark .option-group select option {
   background: #2a2a2a;
   color: #e0e0e0;
-}
-
-@media (max-width: 768px) {
-  .input-row {
-    flex-direction: column;
-  }
-  
-  .advanced-options {
-    grid-template-columns: 1fr;
-  }
 }
