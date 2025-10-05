@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# 📝 Todo Master
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Todo Master** is a modern, feature-rich task management application built with **React**, designed to help you organize your daily activities efficiently. It features a sleek **glassmorphic interface**, **dark/light theme support**, and smooth animations — delivering both functionality and aesthetics.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Overview
 
-### `npm start`
+Todo Master empowers users to manage tasks seamlessly with intuitive controls, advanced filtering, and persistent storage. Whether it’s for personal planning or professional organization, Todo Master keeps you on top of your priorities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Key Features
 
-### `npm test`
+- **Task Management:** Add, edit, and delete tasks effortlessly.  
+- **Completion Tracking:** Mark tasks as complete or incomplete with one click.  
+- **Priority Levels:** Assign tasks as **High**, **Medium**, or **Low** priority.  
+- **Categorization:** Organize tasks under categories like *Work*, *Personal*, *Shopping*, *Health*, and *General*.  
+- **Due Dates:** Set deadlines with automatic overdue indicators.  
+- **Search & Filters:** Find tasks quickly with search and multiple filters (Status, Category, Priority).  
+- **Statistics Dashboard:** Visual overview of task completion and productivity.  
+- **Theme Support:** Toggle between **Dark** and **Light** themes.  
+- **Data Persistence:** Tasks are saved automatically using **LocalStorage**.  
+- **Responsive Design:** Optimized for desktop, tablet, and mobile devices.  
+- **Glassmorphic UI:** Modern, translucent visuals enhanced by smooth transitions and animations.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend:** React.js (Functional Components, Hooks)  
+- **Styling:** Tailwind CSS / Modern CSS (Flexbox & Grid)  
+- **Animations:** Framer Motion  
+- **Storage:** LocalStorage  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📸 UI Highlights
 
-### `npm run eject`
+- Elegant **glassmorphic cards** for tasks  
+- Intuitive **filter controls** and **dashboard layout**  
+- Adaptive **color schemes** for light and dark modes  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚡ Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/todo-master.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd todo-master
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📂 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+C:\Users\Ronel\todo-app\
+│
+├── .git\                          (Git repository)
+│
+├── .github\                       (GitHub Actions folder)
+│   └── workflows\
+│       └── deploy.yml            (Deployment workflow)
+│
+├── node_modules\                  (Dependencies)
+│
+├── public\
+│   ├── favicon.ico               (favicon)
+│   ├── index.html                (Main HTML file)
+│   ├── logo192.png               (Default logo)
+│   ├── logo512.png               (Default logo)
+│   ├── manifest.json             (PWA manifest)
+│   └── robots.txt                (SEO file)
+│
+├── src\
+│   ├── components\               (All React components)
+│   │   ├── FilterBar.css         (Filter section styles)
+│   │   ├── FilterBar.js          (Filter section component)
+│   │   ├── Header.css            (Header styles)
+│   │   ├── Header.js             (Header component with theme toggle)
+│   │   ├── Stats.css             (Statistics dashboard styles)
+│   │   ├── Stats.js              (Statistics dashboard component)
+│   │   ├── TodoInput.css         (Input form styles)
+│   │   ├── TodoInput.js          (Input form component)
+│   │   ├── TodoItem.css          (Individual todo item styles)
+│   │   ├── TodoItem.js           (Individual todo item component)
+│   │   ├── TodoList.css          (Todo list container styles)
+│   │   └── TodoList.js           (Todo list container component)
+│   │
+│   ├── context\                  (Context API state management)
+│   │   ├── ThemeContext.js       (Theme (light/dark) state)
+│   │   └── TodoContext.js        (Todo items state & functions)
+│   │
+│   ├── App.css                   (Global app styles)
+│   ├── App.js                    (Main App component)
+│   ├── index.css                 (Base CSS)
+│   └── index.js                  (React entry point)
+│
+├── .gitignore                    (Git ignore file)
+├── package-lock.json             (Dependency lock file - auto-generated)
+├── package.json                  (Project configuration & dependencies)
+└── README.md                     (Project documentation)
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🧠 Future Enhancements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Task sharing and collaboration  
+- Cloud sync support  
+- User authentication  
+- Notifications and reminders  
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🧑‍💻 Author
 
-### Advanced Configuration
+**Ronel Abraham Mathew**  
+First-year B.Tech CSE Student  
+[LinkedIn](https://www.linkedin.com/in/ronelm) • [GitHub](https://github.com/Ronel-08)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🪪 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
