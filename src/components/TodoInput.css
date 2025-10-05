@@ -1,0 +1,164 @@
+.todo-input-container {
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .todo-input-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+body.dark .todo-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+body.dark .todo-input:focus {
+  border-color: #8b9bff;
+  box-shadow: 0 0 0 3px rgba(139, 155, 255, 0.1);
+}
+
+.add-btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.advanced-toggle {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #667eea;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  transition: opacity 0.3s ease;
+  font-weight: 500;
+}
+
+body.dark .advanced-toggle {
+  color: #8b9bff;
+}
+
+.advanced-toggle:hover {
+  opacity: 0.8;
+}
+
+.advanced-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option-group label {
+  color: #667eea;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+body.dark .option-group label {
+  color: #8b9bff;
+}
+
+.option-group select,
+.option-group input[type="date"] {
+  padding: 10px 12px;
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+body.dark .option-group select,
+body.dark .option-group input[type="date"] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: #e0e0e0;
+}
+
+.option-group select:focus,
+.option-group input[type="date"]:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+body.dark .option-group select:focus,
+body.dark .option-group input[type="date"]:focus {
+  border-color: #8b9bff;
+}
+
+/* Fix dropdown option text visibility */
+.option-group select option {
+  background: white;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+body.dark .option-group select option {
+  background: #2a2a2a;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .input-row {
+    flex-direction: column;
+  }
+  
+  .advanced-options {
+    grid-template-columns: 1fr;
+  }
+}

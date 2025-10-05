@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import { TodoProvider } from './context/TodoContext';
+import Header from './components/Header';
+import TodoInput from './components/TodoInput';
+import FilterBar from './components/FilterBar';
+import TodoList from './components/TodoList';
+import Stats from './components/Stats';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <TodoProvider>
+        <div className="App">
+          <Header />
+          <div className="container">
+            <Stats />
+            <TodoInput />
+            <FilterBar />
+            <TodoList />
+          </div>
+        </div>
+      </TodoProvider>
+    </ThemeProvider>
   );
 }
 
