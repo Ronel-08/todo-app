@@ -1,4 +1,4 @@
-# 📝 Todo Master
+# 📝 To-do Master
 
 **Todo Master** is a modern, feature-rich task management application built with **React**, designed to help you organize your daily activities efficiently. It features a sleek **glassmorphic interface**, **dark/light theme support**, and smooth animations — delivering both functionality and aesthetics.
 
