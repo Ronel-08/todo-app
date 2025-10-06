@@ -132,7 +132,7 @@ C:\Users\Ronel\todo-app\
 
 **Ronel Abraham Mathew**  
 First-year B.Tech CSE Student  
-[LinkedIn](https://www.linkedin.com/in/ronelm) • [GitHub](https://github.com/Ronel-08)
+[LinkedIn](https://www.linkedin.com/in/ronelm) • [GitHub](https://github.com/RM1338)
 
 ---
 
